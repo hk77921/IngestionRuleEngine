@@ -1,0 +1,30 @@
+[
+  {
+    "WorkflowName": "Edition Scan",
+    "Rules": [
+      {
+        "RuleName": "Tag Edition based",
+        "SuccessEvent": "Tagged The edition",
+        "ErrorMessage": "One or more adjust rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.SqlServerName == \"testtesttesttest01\" AND input1.Edition == \"Basic\""
+      }
+
+    ]
+  },
+  {
+    "WorkflowName": "Pool Scan",
+    "Rules": [
+      {
+        "RuleName": "Find the DB",
+        "SuccessEvent": "Tagged the Pool",
+        "ErrorMessage": "One or more adjust rules failed.",
+        "ErrorType": "Error",
+        "RuleExpressionType": "LambdaExpression",
+        "Expression": "input1.SqlServerName == \"testtesttesttest01\" AND input1.ElasticPoolName == \"tinypool\""
+      }
+
+    ]
+  }
+]
